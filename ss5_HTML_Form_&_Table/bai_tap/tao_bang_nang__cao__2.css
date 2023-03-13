@@ -1,0 +1,45 @@
+table {
+    margin: auto;
+}
+sub {
+    color: black;
+}
+td {
+    width: 60px;
+}
+th {
+    color: white;
+}
+table ,tr,td,th{
+    text-align: center;
+    border-collapse: collapse;
+}
+p {
+    text-align: center;
+    color: blue;
+}
+.length {
+    height: 35px;
+}
+.color {
+    background-color: red;
+}
+.color2 {
+    background-color: orange;
+}
+.color3 {
+    background-color: blue;
+}
+.letter {
+    color: red;
+}
+.letter2 {
+    color: blue;
+}
+.frame {
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+p {
+    font-size: 25px;
+}
