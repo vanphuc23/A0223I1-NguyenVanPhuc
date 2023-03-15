@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td >
+            <div>
+                <input type="number" name="money" id="num1">
+            </div>
+        </td>
+        <td>
+            <div>
+                <select name="country" id="country" style="width: 130px">
+                    <option value="VND" name="country">VietNam</option>
+                    <option value="USD" name="country">America</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <div>
+                <select name="something" id="something" style="width: 100px">
+                    <option value="VND" name="something">VND</option>
+                    <option value="USD" name="something">USD</option>
+                </select>
+            </div>
+        </td>
+        <td>
+            <div>
+                <button type="submit" value="Convert" style="background-color: lightskyblue" onclick="do_something()">Convert</button>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="ketqua"></div>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    function do_something() {
+        var a=document.getElementById('num1').value;
+        var b=document.getElementById("country").value;
+        var c=document.getElementById("something").value;
+        if(b==c) {
+            document.getElementById("ketqua").innerHTML="Result: "+ a;
+        }
+        if(b=="VND" && c=="USD") {
+            document.getElementById("ketqua").innerHTML="Result: "+ a/23000;
+        } else {
+            document.getElementById("ketqua").innerHTML="Result: "+ a*23000;
+        }
+    }
+</script>
+</html>
