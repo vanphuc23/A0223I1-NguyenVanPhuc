@@ -31,7 +31,7 @@
     function click1() {
         var a=document.getElementById("num1").value;
         var b=document.getElementById("num2").value;
-        var total= (a+b);
+        var total= parseFloat(a) + parseFloat(b);
         document.getElementById("math").innerHTML="Result Division: "+ total;
     }
     function click2() {
