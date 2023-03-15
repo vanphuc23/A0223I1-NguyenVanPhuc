@@ -5,7 +5,17 @@
     <title>Title</title>
 </head>
 <style>
-
+tr,td {
+    padding: 1px 10px;
+}
+button {
+    background-color: mediumpurple;
+    color: white;
+    border-color: lightblue;
+}
+div {
+    color: blue;
+}
 </style>
 <body>
 <table>
@@ -15,31 +25,23 @@
         <th>To Currency</th>
     </tr>
     <tr>
-        <td >
-            <div>
+        <td>
                 <input type="number" name="money" id="num1">
-            </div>
         </td>
         <td>
-            <div>
                 <select name="country" id="country" style="width: 130px">
                     <option value="VND" name="country">VietNam</option>
                     <option value="USD" name="country">America</option>
                 </select>
-            </div>
         </td>
         <td>
-            <div>
                 <select name="something" id="something" style="width: 100px">
                     <option value="VND" name="something">VND</option>
                     <option value="USD" name="something">USD</option>
                 </select>
-            </div>
         </td>
         <td>
-            <div>
-                <button type="submit" value="Convert" style="background-color: lightskyblue" onclick="do_something()">Convert</button>
-            </div>
+            <button type="submit" value="Convert" onclick="do_something()"><strong>Convert</strong></button>
         </td>
     </tr>
     <tr>
@@ -54,13 +56,17 @@
         var a=document.getElementById('num1').value;
         var b=document.getElementById("country").value;
         var c=document.getElementById("something").value;
-        if(b==c) {
-            document.getElementById("ketqua").innerHTML="Result: "+ a;
+        if(b=="VND" && c=="VND") {
+            document.getElementById("ketqua").innerHTML="Result: "+ a +" VND";
+        }
+        if(b=="USD" && c=="USD") {
+            document.getElementById("ketqua").innerHTML="Result: "+ a +" USD";
         }
         if(b=="VND" && c=="USD") {
-            document.getElementById("ketqua").innerHTML="Result: "+ a/23000;
-        } else {
-            document.getElementById("ketqua").innerHTML="Result: "+ a*23000;
+            document.getElementById("ketqua").innerHTML="Result: "+ a/23000 +" USD";
+        }
+        if(b=="USD" && c=="VND") {
+            document.getElementById("ketqua").innerHTML="Result: "+ a*23000 +" VND";
         }
     }
 </script>

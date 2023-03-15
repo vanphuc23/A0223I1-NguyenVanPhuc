@@ -4,10 +4,124 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    tr,td {
+        width: 120px;
+        height: 20px;
+    }
+</style>
 <body>
-
+<h2>Bài 1:</h2>
+<table>
+    <tr>
+        <td>
+            <lable for="vatly">Vật lý:</lable>
+        </td>
+        <td>
+            <input type="number" id="vatly" name="vatly">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable for="hoahoc">Hóa học:</lable>
+        </td>
+        <td>
+            <input type="number" id="hoahoc" name="hoahoc">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable for="sinhhoc">Sinh học:</lable>
+        </td>
+        <td>
+            <input type="number" id="sinhhoc" name="sinhhoc">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable for="sum">Tổng điểm:</lable>
+        </td>
+        <td>
+            <input type="number" id="sum" name="sum" readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <lable for="tb">Điểm trung bình:</lable>
+        </td>
+        <td>
+            <input type="number" id="tb" name="tb" readonly>
+        </td>
+    </tr>
+<tr>
+    <td></td>
+    <td>
+<button type="submit" value="send" onclick="click1()">Send</button>
+    </td>
+</tr>
+</table>
+<h2>Bài 2</h2>
+    <table>
+        <tr>
+            <td>Độ C</td>
+            <td>
+                <input type="number" id="doc">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" value="ok" onclick="click3()">OK</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="degree"></td>
+        </tr>
+    </table>
+<h2>Bài 3,4</h2>
+<table>
+    <tr>
+        <td>Bán kính</td>
+        <td>
+            <input type="number" id="bk">
+        </td>
+    </tr>
+    <tr>
+        <td>Chu vi</td>
+        <td>
+            <input  id="cv" readonly>
+        </td>
+    </tr>
+    <tr>
+        <td>Diện tích</td>
+        <td>
+            <input id="dt" readonly>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="button" value="gui" onclick="click2()">Gửi</button>
+        </td>
+    </tr>
+</table>
 </body>
 <script>
-
+    function click1() {
+        var ly = document.getElementById("vatly").value;
+        var hoa = document.getElementById("hoahoc").value;
+        var sinh = document.getElementById("sinhhoc").value;
+        tong=document.getElementById("sum").value=parseFloat(ly)+parseFloat(hoa)+parseFloat(sinh);
+        document.getElementById("tb").value=tong/3;
+    }
+    function click3() {
+        var e=document.getElementById("doc").value;
+        document.getElementById("degree").innerText="Độ F = " +((e*9/5) +32) ;
+    }
+    function click2() {
+        var r = document.getElementById("bk").value;
+        document.getElementById("cv").value=r*2*3.14;
+        document.getElementById("dt").value=3.14*r*r;
+    }
 </script>
 </html>

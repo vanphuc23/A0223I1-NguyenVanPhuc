@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    input {
+        width: 150px;
+    }
+    button {
+        width: 110px;
+    }
+</style>
 <body>
-
+<div>
+    <h2>Caculator</h2>
+</div>
+<div>
+<input type="number" id="num1">
+<input type="number" id="num2">
+</div>
+<br>
+<button type="button" value="Addition(+)" onclick="click1()">Addition(+)</button>
+<button type="button" value="Subtraction(-)" onclick="click2()">Subtraction(-)</button>
+<button type="button" value="Multiplication(X)" onclick="click3()">Multiplication(X)</button>
+<button type="button" value="Division(/)" onclick="click4()">Division(/)</button>
+<p id="math"></p>
 </body>
+<script>
+    function click1() {
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var total= (a+b);
+        document.getElementById("math").innerHTML="Result Division: "+ total;
+    }
+    function click2() {
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var total= (a-b);
+        document.getElementById("math").innerHTML="Result Division: "+ total;
+    }
+    function click3() {
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var total= (a*b);
+        document.getElementById("math").innerHTML="Result Division: "+ total;
+    }
+    function click4() {
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var total= (a/b);
+        document.getElementById("math").innerHTML="Result Division: "+ total;
+    }
+</script>
 </html>
