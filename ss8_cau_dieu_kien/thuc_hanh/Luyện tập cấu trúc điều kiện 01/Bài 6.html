@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhso = +prompt('Nhập doanh số bán hàng: ');
+    let hoahong;
+    if (doanhso <= 100) {
+        hoahong = doanhso * 5 / 100;
+        alert('Hoa hồng nhận được: ' + hoahong);
+    } else if (doanhso <= 300) {
+        hoahong = doanhso * 10 / 100;
+        alert('Hoa hồng nhận được: ' + hoahong);
+    } else {
+        hoahong = doanhso * 20 / 100;
+        alert('Hoa hồng nhận được: ' + hoahong);
+    }
+</script>
+</body>
+</html>

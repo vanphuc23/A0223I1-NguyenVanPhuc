@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3>Nhập tuổi:</h3>
+    <input type="number" id="date">
+</div>
+<button type="button" style="margin-top: 10px" onclick="click1()">Send</button>
+</body>
+<script>
+    function click1() {
+        var a=+document.getElementById("date").value;
+        if(a<16) {
+            alert('Không đủ tuổi vào lớp 10');
+        } else {
+            alert('Đủ tuổi vào lớp 10');
+        }
+    }
+</script>
+</html>

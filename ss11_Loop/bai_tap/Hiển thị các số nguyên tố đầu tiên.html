@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    var a=+prompt('Nhập: ')
+    var count = 1;
+    for (var i = 2; count <= a; i++) {
+        var s = 0;
+        for (var j = 2; j <= Math.sqrt(i); j++) {
+            if (i % j == 0) {
+                s = 1;
+            }
+        }
+        if (s == 0) {
+            document.write("  " + i);
+            count++;
+        }
+    }
+</script>
+</body>
+</html>

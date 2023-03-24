@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    var n = +prompt("Nhập n:")
+    var m = +prompt("Nhập m:")
+    for (var i = 1; i <= m; i++) {
+        for (var j = 1; j <= n; j++) {
+            if (i > 1 && i < m && j > 1 && j < n) {
+                document.writeln("\xa0\xa0");
+            } else {
+                document.writeln("* ");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

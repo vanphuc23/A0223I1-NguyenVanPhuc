@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, tr, td {
+        width: 20%;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<table>
+    <tr style="border-bottom: 2px solid black;">
+        <td>BMI</td>
+        <td>Interpretation</td>
+    </tr>
+    <tr>
+        <td>BMI < 18.5</td>
+        <td>Underweight</td>
+    </tr>
+    <tr>
+        <td>18.5 ≤ BMI < 25.0</td>
+        <td>Normal</td>
+    </tr>
+    <tr>
+        <td>25.0 ≤ BMI < 30.0</td>
+        <td>Overweight</td>
+    </tr>
+    <tr>
+        <td>30.0 ≤ BMI</td>
+        <td>Obese</td>
+    </tr>
+</table>
+<br>
+<div>
+    <lable for="cannang">Nhập weight:</lable>
+    <br>
+    <input type="text" id="cannang" name="cannang">
+</div>
+<div>
+    <lable for="chieucao">Nhập height:</lable>
+    <br>
+    <input type="text" id="chieucao" name="chieucao">
+</div>
+<button type="button" onclick="Send()">Click</button>
+</body>
+<script>
+    function Send() {
+        var a = +document.getElementById("cannang").value;
+        var b = +document.getElementById("chieucao").value;
+        var bmi = (a / (b * b));
+        if (bmi < 18.5) {
+            alert('Underweight');
+        } else if (bmi < 25.0) {
+            alert('Normal');
+        } else if (bmi < 30.0) {
+            alert('Overweight');
+        } else {
+            alert('Obese');
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3>Nhập a:</h3>
+    <input type="number" id="number1">
+    <h3>Nhập b:</h3>
+    <input type="number" id="number2">
+    <h3>Nhập c:</h3>
+    <input type="number" id="number3">
+</div>
+<button type="button" onclick="click2()">Send</button>
+</body>
+<script>
+    function click2() {
+        var a=+document.getElementById("number1").value;
+        var b=+document.getElementById("number2").value;
+        var c=+document.getElementById("number3").value;
+        if(a>=b && a>=c) {
+            alert(a);
+        } else if(b<=c) {
+            alert(c);
+        } else {
+            alert(b);
+        }
+    }
+</script>
+</html>

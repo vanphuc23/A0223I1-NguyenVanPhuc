@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    h1 {
+        position: absolute;
+        top:200px;
+        left: 300px;
+    }
+    .button1 {
+        position: absolute;
+        top: 260px;
+        left: 350px;
+        width: 50px;
+    }
+    .button2 {
+        position: absolute;
+        top: 260px;
+        left: 430px;
+        width: 50px;
+    }
+</style>
+<body>
+<div>
+<h1>Do you love me</h1>
+
+    <div>
+        <button type="button" class="button1" id="button1" onclick="click2()">YES</button>
+        <button type="button" class="button2" id="button2" onmouseover="mouse()">NO</button>
+    </div>
+</div>
+</body>
+<script>
+    function click2() {
+        alert('Yes. you are right');
+    }
+    function mouse() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('button2').style.left = x + 'px';
+        document.getElementById('button2').style.top = y + 'px';
+    }
+</script>
+</html>

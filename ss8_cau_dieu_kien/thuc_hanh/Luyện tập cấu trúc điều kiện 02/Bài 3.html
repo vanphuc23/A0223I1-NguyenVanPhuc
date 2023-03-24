@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<style>
+    lable {
+        font-weight: bold;
+    }
+</style>
+<body>
+<lable>Nhập cạnh hình vuông:</lable>
+<input type="number" id="number1">
+<button type="button" onclick="clickme()">Send</button>
+<p id="check"></p>
+</body>
+<script>
+    function clickme() {
+        var a = +document.getElementById("number1").value;
+        document.getElementById("check").innerText = 'Diện tích hình vuông: ' + a * a;
+    }
+</script>
+</html>

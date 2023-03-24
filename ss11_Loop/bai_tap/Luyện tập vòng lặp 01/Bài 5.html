@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    var f0 = 0;
+    var f1 = 1;
+    var fn = 1;
+    var sum = 0;
+    for (var i = 0; i < 20; i++) {
+        if (i == 0 || i == 1) {
+            fn = 1;
+        } else if (i >= 2) {
+            f0 = f1;
+            f1 = fn;
+            fn = f0 + f1;
+        }
+        sum+=fn;
+    }
+    alert(sum);
+</script>
+</body>
+</html>

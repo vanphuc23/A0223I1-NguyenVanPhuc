@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = +prompt('Nhập điểm bài kiểm tra:');
+    var b = +prompt('Nhập điểm bài thi giữa kỳ:');
+    var c = +prompt('Nhập điểm bài thi cuối kỳ:');
+    var total = (a + b + c) / 3;
+    if (total >= 8) {
+        alert('Loại giỏi');
+    } else if (total >= 6.5) {
+        alert('Loại khá');
+    } else if (total >= 5) {
+        alert('Loại trung bình');
+    } else if (total >= 3.5) {
+        alert('Loại yếu');
+    } else {
+        alert('Loại kém');
+    }
+</script>
+</body>
+</html>

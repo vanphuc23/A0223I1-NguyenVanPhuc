@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+<script>
+    let tien = +prompt("Nhập số tiền ban đầu");
+    let thang = +prompt("Nhập số tháng cho vay");
+    let laiSuat = +prompt("Nhập lãi suất hàng tháng");
+
+    for (let i = 0; i <= thang; i++) {
+        tien = (tien * thang * laiSuat) / 100;
+    }
+    alert("Số tiền lãi là: " + tien);
+</script>
+</body>
+</html>

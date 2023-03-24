@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<button type="button" value="chơi" onclick="clickme()">Chơi</button>
+</body>
+<script>
+    function clickme() {
+        let a = prompt("Nhập vào số muốn đoán trong khoảng");
+        let r = parseInt(Math.random() * a);
+        let b = +prompt("Nhập giá trị mà người dùng đoán");
+        while (b > r || b < r) {
+            if (b > r) {
+                alert("Lớn hơn");
+            }
+            if (b < r) {
+                alert("Bé thua")
+            }
+            b = prompt("Nhập lại:")
+        }
+        alert("Chúc mừng và kết thúc lượt chơi");
+    }
+</script>
+</html>

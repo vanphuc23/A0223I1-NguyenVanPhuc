@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+</head>
+<body>
+<script>
+    var sd = +prompt("Nhập vào chỉ số điện tiêu thụ:");
+    var money;
+    if (sd <= 100) {
+        money = sd * 600;
+    } else if (sd <= 150) {
+        money = sd * 700;
+    } else if (sd <= 200) {
+        money = sd * 900;
+    } else {
+        money = sd * 1100;
+    }
+    alert(money);
+</script>
+</body>
+</html>

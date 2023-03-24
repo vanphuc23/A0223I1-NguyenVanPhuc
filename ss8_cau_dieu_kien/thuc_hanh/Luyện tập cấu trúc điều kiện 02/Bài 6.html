@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    var a = +prompt('Nhập a');
+    var b = +prompt('Nhập b');
+    if (a == 0 && b == 0) {
+        alert('Kết quả: Phương trình có vô số nghiệm!');
+    }
+    if (a == 0 && b != 0) {
+        alert('Kết quả: Phương trình vô nghiệm!');
+    }
+    if (a != 0 && b != 0) {
+        alert('Kết quả: Phương trình có nghiệm duy nhất x = ' + (-b / a));
+    }
+</script>
+</html>

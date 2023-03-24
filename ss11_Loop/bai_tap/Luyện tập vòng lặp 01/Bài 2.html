@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    var temp = +prompt("Nhập nhiệt độ hiện tại");
+    while (temp >= 100 || temp <= 20) {
+        if (temp >= 100) {
+            alert("Yêu cầu người dùng giảm nhiệt độ.");
+        }
+        if (temp <= 20) {
+            alert("Yêu cầu người dùng tăng nhiệt độ.");
+        }
+        temp = +prompt("Nhập lại nhiệt độ:");
+    }
+    document.writeln("Nhiệt độ hiện tại: " + temp);
+</script>
+</body>
+</html>

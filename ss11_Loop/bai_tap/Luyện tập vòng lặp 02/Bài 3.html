@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    var n = +prompt("Nhập:");
+    for (var i = n; i >= 1; i--) {
+        for (var j = 1; j <= n; j++) {
+            if (j >= i) {
+                document.writeln("* ");
+            } else {
+                document.writeln(" ");
+            }
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for(var i1=n;i1>=1;i1--) {
+        for(var j1=1;j1<=n;j1++) {
+            if(j1<=i1 || j1==1) {
+                document.writeln("* ");
+            } else {
+                document.writeln(" ");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

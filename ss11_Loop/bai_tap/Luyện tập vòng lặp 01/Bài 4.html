@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    var f0 = 0;
+    var f1 = 1;
+    var sum = 1;
+    for (let i = 0; i < 10; i++) {
+        if (i == 0 || i == 1) {
+            sum = 1;
+        } else if (i >= 2) {
+            f0 = f1;
+            f1 = sum;
+            sum = f1 + f0;
+            if (sum % 5 == 0) {
+                alert(sum);
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
