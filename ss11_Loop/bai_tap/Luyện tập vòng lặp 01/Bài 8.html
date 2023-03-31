@@ -5,19 +5,18 @@
     <title>Bài 8</title>
 </head>
 <body>
-<button type="button" value="chơi" onclick="clickme()">Chơi</button>
+<button type="button" value="chơi" onclick="clickMe()">Chơi</button>
 </body>
 <script>
-    function clickme() {
+    function clickMe() {
         let a = prompt("Nhập vào số muốn đoán trong khoảng");
         let r = parseInt(Math.random() * a);
         let b = +prompt("Nhập giá trị mà người dùng đoán");
         while (b > r || b < r) {
             if (b > r) {
-                alert("Lớn hơn");
-            }
-            if (b < r) {
-                alert("Bé thua")
+                alert(b + " lớn hơn kết quả");
+            } else if (b < r) {
+                alert(b + " nhỏ hơn kết quả")
             }
             b = prompt("Nhập lại:")
         }

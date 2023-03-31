@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let v = prompt('Nhập phần tử:');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == v) {
+            arr.splice(i, 1);
+            arr.push(0);
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

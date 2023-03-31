@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let arr = [1, 34, 12, 5, 24, 7, 35, 4, 13, 9];
+    let maxArray = arr[0];
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxArray) {
+            maxArray = arr[i];
+            index = i;
+        }
+    }
+    document.writeln("Số lớn nhất trong mảng: " + maxArray + "<br>");
+    document.writeln("Vị trí số lớn nhất trong mảng: " + "vị trí số " + index);
+</script>
+</body>
+</html>
