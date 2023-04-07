@@ -6,20 +6,15 @@
 </head>
 <body>
 </body>
-<script>x
-    let word=prompt('Nhập từ cần tìm:');
-    let eng=['zero','one','two','three','four','five'];
-    let vn=['số 0','số 1','số 2','số 3','số 4','số 5'];
-    let index=-1;
-    for(let i=0;i<eng.length;i++) {
-        if(word==eng[i]) {
-            index=i;
+<script>
+    function myFunction() {
+        let myNum = 10;
+        function showNum() {
+            alert(myNum);
         }
+        return showNum();
     }
-    if(index != -1) {
-        alert('từ '+eng[index]+' có tiếng việt là: '+vn[index]);
-    } else {
-        alert('Không tìm thấy')
-    }
+    let callFunc = myFunction();
+    myFunction();
 </script>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+
+</body>
+<script>
+    function translate() {
+        let a = confirm('Chuyển đổi từ feet sang meters:');
+        if (a == true) {
+            let b = +prompt('Chuyển đổi từ feet sang meters:');
+
+            function footToMeter(foot) {
+                let meter = 0.305 * foot;
+                return meter;
+            }
+
+            alert(footToMeter(b));
+        }
+    }
+
+    translate();
+
+    function translate2() {
+        let c = confirm('Chuyển đổi từ meters sang feet:');
+        if (c == true) {
+            let d = +prompt('Chuyển đổi từ meters sang feet:');
+
+            function meterToFoot(meter) {
+                foot = 3.279 * meter;
+                return foot;
+            }
+
+            alert(meterToFoot(d));
+        }
+    }
+
+    translate2();
+</script>
+</html>

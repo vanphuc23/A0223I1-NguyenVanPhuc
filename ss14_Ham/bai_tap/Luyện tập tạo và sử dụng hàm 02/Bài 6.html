@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkInteger(number) {
+        if (number > 0 && Number.isInteger(number)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let num = +prompt('Nhập một số:')
+    alert(checkInteger(num));
+</script>
+</html>

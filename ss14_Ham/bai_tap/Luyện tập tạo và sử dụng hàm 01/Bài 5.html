@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let star = window.prompt();
+    let index = -1;
+    let stararr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function findStar(str) {
+        for (let i = 0; i < stararr.length; i++) {
+            if (str === stararr[i]) {
+                index = i;
+            }
+        }
+        if (index != -1) {
+            alert(arr[index]);
+        } else {
+            alert('Không tìm thấy');
+        }
+        return str;
+    }
+
+    findStar(star);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<lable>Nhập số:</lable>
+<input type="number" oninput="square()" onchange="square()" id="txt">
+<p id="algorithm"></p>
+</body>
+<script>
+    function square() {
+        let number = document.getElementById('txt').value;
+        let result = document.getElementById('algorithm').innerText = 'Bình phương của một số: ' + number * number;
+    }
+</script>
+</html>

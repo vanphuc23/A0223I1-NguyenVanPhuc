@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+
+</body>
+<script>
+    function smallInteger(a, b, c) {
+        min = a;
+        if (b < c && b < a) {
+            min = b;
+        } else if (c < a) {
+            min = c;
+        }
+        return min;
+    }
+
+    let number1 = +prompt('Nhập số thứ nhất:');
+    let number2 = +prompt('Nhập số thứ hai:');
+    let number3 = +prompt('Nhập số thứ ba:');
+    alert(smallInteger(number1, number2, number3));
+</script>
+</html>
