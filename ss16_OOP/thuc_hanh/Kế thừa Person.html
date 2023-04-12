@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kế thừa Person</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Person=function (firstName,lastName,age,gender,interests) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+        this.getFullName = function () {
+            return this.firstName + ' ' + this.lastName;
+        }
+        this.bio = function () {
+            return `${this.getFullName()} is ${this.age} years old. They like ${this.interests}`;
+        }
+    }
+    let Teacher=function (firstName,lastName,age,gender,interests) {
+        Person.call(this,firstName,lastName,age,gender,interests);
+    }
+</script>
+</html>

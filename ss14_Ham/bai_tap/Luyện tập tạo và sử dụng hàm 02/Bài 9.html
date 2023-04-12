@@ -11,16 +11,19 @@
     let arr = ['a', 'b', 'c', 'd', 'a', 1, 2, 3, 4, 1];
     let a = prompt('Nhập ký tự bất kỳ:');
 
-    function countElement() {
+    function countElement(character) {
+        debugger;
         let count = 0;
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i] == a) {
+            if (arr[i] == character) {
                 count++;
-            } else {
-                count = -1;
             }
         }
-        return count;
+        if (count != 0) {
+            return count;
+        } else {
+            return count = -1;
+        }
     }
 
     alert(countElement(a));

@@ -8,15 +8,16 @@
 
 </body>
 <script>
-    debugger
 
     function reverseArray(array) {
         do {
             array;
         } while (array <= 0 || array >= 100);
+        let a = 1;
         let arr = new Array(array);
         for (let i = 0; i < arr.length; i++) {
-            arr[i] = prompt('Nhập phần tử cho mảng:');
+            arr[i] = prompt('Nhập phần tử thứ ' + a + ' cho mảng:');
+            a++;
         }
         return arr.reverse();
     }

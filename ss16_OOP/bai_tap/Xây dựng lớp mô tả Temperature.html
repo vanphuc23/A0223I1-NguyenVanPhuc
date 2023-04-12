@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let Temperature=function (degreeC) {
+    //     this.degreeC = degreeC;
+    //     this.degreeF = function () {
+    //         return (1.8 * degreeC + 32) + " °F";
+    //     }
+    //     this.degreeKenvin = function () {
+    //         return (degreeC + 273.15) + " K";
+    //     }
+    // }
+    function Temperature(degreeC) {
+        this.degreeC = degreeC;
+        this.degreeF = function () {
+            return (1.8 * this.degreeC + 32) + " °F";
+        }
+        this.degreeKenvin = function () {
+            return (this.degreeC + 273.15) + " K";
+        }
+    }
+
+    let degree = new Temperature(25);
+    alert(degree.degreeF());
+    alert(degree.degreeKenvin());
+</script>
+</html>

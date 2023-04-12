@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gửi tin nhắn trên điện thoại</title>
+</head>
+<body>
+
+</body>
+<script>
+    let Mobile = function (id, name) {
+        this.id = id;
+        this.name = name;
+        this.setMessager = function (messager) {
+            this.message = messager;
+        }
+        this.getMessager = function () {
+            return this.message;
+        }
+        this.sendMessager = function (messager, mobile) {
+            mobile.setMessager(messager);
+        }
+    }
+    let iphone = new Mobile(1, "Iphone");
+    let android = new Mobile(2, "Samsung");
+    iphone.sendMessager("Hello Samsung", android);
+    let a = android.getMessager();
+    console.log(a);
+</script>
+</html>

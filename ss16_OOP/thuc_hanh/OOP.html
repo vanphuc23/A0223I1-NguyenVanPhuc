@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<script>
+    function Person(firstName,lastName,age) {
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.age=age;
+
+        this.getFullName= function () {
+            return this.firstName+' '+this.lastName+' '+this.age+' tuổi';
+        }
+    }
+    Person.prototype.address='Đà Nẵng';
+    function Student(firstName,lastName,age,classs) {
+        Person.call(this,firstName,lastName,age);
+        this.classs=classs;
+    }
+    Student.prototype=new Person();
+    Student.prototype.constructor=Student;
+    var std=new Student('Van','A',18,'12A4');
+    alert(std.getFullName());
+</script>
+</body>
+</html>
