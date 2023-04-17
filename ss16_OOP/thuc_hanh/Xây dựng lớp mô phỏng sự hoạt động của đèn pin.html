@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô phỏng sự hoạt động của đèn pin</title>
+</head>
+<body>
+<button onclick="openColor()" style="display: none" id="on">Bật</button>
+<button onclick="closeColor()" style="display: none" id="off">Tắt</button>
+</body>
+<script>
+    function openColor() {
+        document.body.style.backgroundColor = "lightyellow";
+        battery.decreaseEnergy();
+        flashLamp.light("Đang bật");
+    }
+
+    function closeColor() {
+        document.body.style.backgroundColor = "white";
+        flashLamp.light("Đang tắt");
+    }
+
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+
+        getEnergy() {
+            return this.energy;
+        }
+
+        decreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            } else {
+                alert("Đèn hết pin");
+            }
+        }
+    }
+
+
+    class FlashLamp {
+        constructor() {
+            this.status = "Đang tắt";
+        }
+
+        setBattery(battery) {
+            this.battery = battery;
+        }
+
+        getBattery() {
+            return this.battery;
+        }
+
+        light(status) {
+            this.status = status;
+            return this.status;
+        }
+
+        turnOn() {
+            document.getElementById('on').style.display = 'block';
+        }
+
+        turnOff() {
+            document.getElementById('off').style.display = 'block';
+        }
+    }
+
+    let battery = new Battery(10);
+    let flashLamp = new FlashLamp();
+    flashLamp.turnOn();
+    flashLamp.turnOff();
+</script>
+</html>

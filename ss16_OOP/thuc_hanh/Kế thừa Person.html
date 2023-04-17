@@ -8,7 +8,7 @@
 
 </body>
 <script>
-    let Person=function (firstName,lastName,age,gender,interests) {
+    let Person = function (firstName, lastName, age, gender, interests) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -20,9 +20,33 @@
         this.bio = function () {
             return `${this.getFullName()} is ${this.age} years old. They like ${this.interests}`;
         }
+        this.greeting = function () {
+            return `Hi! I'm ${this.getFullName()}`;
+        }
     }
-    let Teacher=function (firstName,lastName,age,gender,interests) {
-        Person.call(this,firstName,lastName,age,gender,interests);
+
+    let Teacher = function (firstName, lastName, age, gender, interests, subject) {
+        Person.call(this, firstName, lastName, age, gender, interests);
+        this.subject = subject;
+        this.greeting = function (prefix) {
+            this.prefix = prefix;
+            return `Hello. My name is ${this.prefix}. ${this.lastName}, and I teach ${this.subject}.`;
+        }
     }
+    Teacher.prototype = new Person();
+    Teacher.prototype.constructor = Teacher;
+    let teacher = new Teacher('Nguyễn', 'Văn', 28, 'Male', 'Football and Games', 'Math');
+    alert(teacher.greeting('Mr'));
+
+    let Student = function (firstName, lastName, age, gender, interests) {
+        Person.call(this, firstName, lastName, age, gender, interests);
+        this.greeting = function () {
+            return `Yo! I'm ${this.getFullName()}`;
+        }
+    }
+    Student.prototype = new Person();
+    Student.prototype.constructor = Student;
+    var student = new Student('Nguyễn', 'Văn', 18, 'Male', 'Football and Games');
+    alert(student.greeting());
 </script>
 </html>

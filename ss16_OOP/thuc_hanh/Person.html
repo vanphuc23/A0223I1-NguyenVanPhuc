@@ -8,24 +8,25 @@
 
 </body>
 <script>
-    let Person=function (firstName,lastName,age,gender,interests) {
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.age=age;
-        this.gender=gender;
-        this.interests=interests;
-        this.getFullName=function () {
-            return this.firstName + ' ' + this.lastName;
+    class Person {
+        constructor(firstName,lastName,age,gender,interests) {
+            this.firstName=firstName;
+            this.lastName=lastName;
+            this.age=age;
+            this.gender=gender;
+            this.interests=interests;
         }
-        this.bio= function () {
+        getFullName() {
+            return `${this.firstName} ${this.lastName}`;
+        }
+        bio(){
             return `${this.getFullName()} is ${this.age} years old. They like ${this.interests}`;
         }
-        this.greeting=function () {
-            return `Hi! I'm ${this.firstName}`;
+        greeting() {
+            return `Hi! I'm ${this.lastName}`;
         }
     }
-    let person=new Person('Bob','Scope',18,'Male','Football and Games');
-    console.log(person.bio());
-    console.log(person.greeting());
+    let person=new Person('Nguyễn','Văn',18,'Male','Football and Games');
+    alert(person.bio());
 </script>
 </html>

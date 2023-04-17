@@ -8,21 +8,16 @@
 
 </body>
 <script>
-    // let Temperature=function (degreeC) {
-    //     this.degreeC = degreeC;
-    //     this.degreeF = function () {
-    //         return (1.8 * degreeC + 32) + " °F";
-    //     }
-    //     this.degreeKenvin = function () {
-    //         return (degreeC + 273.15) + " K";
-    //     }
-    // }
-    function Temperature(degreeC) {
-        this.degreeC = degreeC;
-        this.degreeF = function () {
+    class Temperature {
+        constructor(degreeC) {
+            this.degreeC = degreeC;
+        }
+
+        degreeF() {
             return (1.8 * this.degreeC + 32) + " °F";
         }
-        this.degreeKenvin = function () {
+
+        degreeKenvin() {
             return (this.degreeC + 273.15) + " K";
         }
     }

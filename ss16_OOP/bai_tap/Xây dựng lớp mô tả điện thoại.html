@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Mobile {
+        constructor(name, status, battery) {
+            this.name = name;
+            this.status = status;
+            this.battery = battery;
+            this.saveMessager = "";
+            this.inboxMessager = [];
+            this.sendMessager = [];
+        }
+
+        checkStatus() {
+            return this.status;
+        }
+
+        turnOnOff() {
+            this.status = !this.status;
+        }
+
+        charger() {
+            if (this.battery > 0 && this.battery < 100) {
+                this.battery++;
+            } else if (this.battery === 100) {
+                alert("Điện thoại đã đầy pin");
+            } else if (this.battery === 0) {
+                alert("Điện thoại tắt nguồn sau 10s");
+            }
+        }
+
+        write(text) {
+            if (this.status) {
+                this.saveMessager = text;
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+        }
+
+        send(mobile) {
+            if (this.status) {
+                this.sendMessager.push(this.saveMessager);
+                mobile.inboxMessager.push(this.saveMessager);
+                this.saveMessager = "";
+                this.battery--;
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+        }
+
+        getInbox() {
+            if (this.status) {
+                this.battery--;
+                return this.inboxMessager;
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+        }
+
+        getSend() {
+            if (this.status) {
+                this.battery--;
+                return this.sendMessager;
+            } else {
+                alert("Điện thoại đang tắt");
+            }
+        }
+    }
+
+    let samsung = new Mobile('Samsung', true, 100);
+    let iphone = new Mobile('Iphone', true, 100);
+</script>
+</html>

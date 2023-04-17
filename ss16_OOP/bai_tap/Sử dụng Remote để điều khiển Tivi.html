@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng Remote để điều khiển Tivi</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Tivi {
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+
+        setChannel(newChannel) {
+            this.channel = newChannel;
+        }
+
+        volumeUp(newVolume) {
+            this.volume += newVolume;
+        }
+
+        volumeDown(newVolume) {
+            this.volume -= newVolume;
+        }
+
+        turnOnOff() {
+            if (this.status) {
+                this.status = false;
+            } else {
+                this.status = true;
+            }
+        }
+    }
+
+    class Remote {
+        constructor(code, tivi) {
+            this.code = code;
+            this.tivi = tivi;
+        }
+
+        changeChannel(channel) {
+            this.tivi.setChannel(channel);
+        }
+
+        changeVolumeUp(newVolume) {
+            this.tivi.volumeUp(newVolume);
+        }
+
+        changeVolumeDown(newVolume) {
+            this.tivi.volumeDown(newVolume);
+        }
+
+        changeStatus() {
+            this.tivi.turnOnOff();
+        }
+    }
+
+    let t1 = new Tivi(5, 5, false);
+    let remote = new Remote(1, t1);
+    t1.turnOnOff();
+    remote.changeChannel(3);
+    remote.changeVolumeUp(2);
+    remote.changeStatus();
+</script>
+</html>

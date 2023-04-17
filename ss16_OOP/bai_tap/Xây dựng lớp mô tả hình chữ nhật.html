@@ -19,13 +19,17 @@
 <canvas id="myCanvas" width="1000px" height="1000px"></canvas>
 </body>
 <script>
-    let Rectangle = function (length, width) {
-        this.length = length;
-        this.width = width;
-        this.getPerimeter = function () {
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getPerimeter() {
             return (2 * this.length + 2 * this.width);
         }
-        this.getArea = function () {
+
+        getArea() {
             return this.length * this.width;
         }
     }
